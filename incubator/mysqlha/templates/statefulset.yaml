@@ -171,7 +171,7 @@ spec:
               | sed s/@@REPLICATION_USER@@/"${MYSQL_REPLICATION_USER}"/g \
               | sed s/@@REPLICATION_PASSWORD@@/"${MYSQL_REPLICATION_PASSWORD}"/g \
               | tee create-replication-user.sql
-            mysql -h 127.0.0.1 --verbose < create-replication-user.sql
+            mysql -h 127.0.0.1 --verbose < create-replication-user.orig.sql
           fi
 
           cd /var/lib/mysql
